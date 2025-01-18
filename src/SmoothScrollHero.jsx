@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { Projects } from "./components/Projects";
 import SecondaryHero from './components/SecondaryHero';
 import { Stacks } from './components/ClipPathLinks';
-
+import { BouncyCardsFeatures } from "./components/BouncyCardsFeatues";
 export const SmoothScrollHero = () => {
       return (
             <div id="main-bg" className="bg-zinc-950">
@@ -27,6 +27,7 @@ export const SmoothScrollHero = () => {
                         <SecondaryHero />
                         <Projects />
                         <Stacks />
+                        <BouncyCardsFeatures />
                   </ReactLenis>
             </div>
       );
@@ -56,7 +57,7 @@ const Hero = () => {
                   style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
                   className="relative w-full"
             >
-                  <div className="absolute left-[50dvw] -translate-x-1/2 flex flex-col justify-between h-[80vh] mt-14 z-10">
+                  <div className="absolute left-[50dvw] -translate-x-1/2 flex flex-col justify-between h-[80vh] mt-12 z-10">
                         <img src="/sq.png" alt="" className="h-24 w-40 text-center mx-auto" />
                         <FaHandPointDown className="text-5xl xl:7xl ml-14 animate-bounce text-pink-700 " />
                   </div>

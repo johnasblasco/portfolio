@@ -2,6 +2,7 @@ import React from 'react';
 import { SmoothScrollHero } from './SmoothScrollHero';
 import useCanvasCursor from './hooks/useCanvasCursor';
 import { VelocityText } from './components/VelocityText';
+import { Contact } from './components/Contact'
 const App = () => {
       // Activate the custom cursor effect
       useCanvasCursor();
@@ -16,6 +17,8 @@ const App = () => {
 
                   <SmoothScrollHero />
                   <VelocityText />
+                  <Contact />
+
             </>
       );
 };
