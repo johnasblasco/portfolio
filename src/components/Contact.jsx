@@ -1,27 +1,101 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
 
 export const Contact = () => {
       return (
-            <div className="flex items-center justify-center bg-neutral-100 px-8 py-24 text-neutral-800">
+            <div className="flex flex-col items-center justify-center bg-neutral-100 px-8 py-24 text-neutral-800">
+                  {/* Contact  */}
+                  <ContactPage />
                   <BlockInTextCard
-                        tag="/ Support"
+                        tag="/ CONTACT"
                         text={
                               <>
-                                    <strong>Have questions?</strong> We'd love to help! Contact support
-                                    for any issue you may face.
+                                    <strong>Have questions?</strong> Feel free to reach out to me on my socials. Thank you for visiting my website.
+                                    <br />I'm always happy to see you.
+
                               </>
                         }
                         examples={[
-                              "Does your product work for SMBs?",
-                              "Can I pause my membership without losing my data?",
-                              "How does seat based pricing work?",
-                              "What's the meaning of life?",
+                              "Are you looking for a job?",
+                              "What is your favorite color?",
+                              "How old are you?",
+                              "Are you still single?",
                         ]}
                   />
             </div>
       );
 };
+
+
+const ContactPage = () => {
+      return (
+            <>
+                  <div className="mb-20">
+                        <img src="/logo.png" className="size-20 mx-auto " alt="logo" />
+                        <h2 className="text-zinc-950 text-6xl font-extrabold text-center">Contact Me Girl</h2>
+                        <p className="text-center m-10">Let me know if I can help you</p>
+                  </div>
+
+                  <div className="md:grid md:grid-cols-4 gap-10">
+                        {/* card here */}
+                        <Card
+                              title="Facebook"
+                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
+                              href="#"
+                              Icon={FiUser}
+                        />
+                        <Card
+                              title="Facebook"
+                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
+                              href="#"
+                              Icon={FiUser}
+                        />
+                        <Card
+                              title="Facebook"
+                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
+                              href="#"
+                              Icon={FiUser}
+                        />
+                        <Card
+                              title="Facebook"
+                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
+                              href="#"
+                              Icon={FiUser}
+                        />
+                  </div>
+
+
+
+            </>
+      );
+}
+
+const Card = ({ title, subtitle, href, Icon }) => {
+      return (
+            <>
+                  <div>
+                        <a
+                              href={href}
+                              className="text-zinc-950 my-10 font-bold w-full p-4 rounded border-zinc-900 relative overflow-hidden group bg-white flex flex-col items-center justify-center text-center"
+                        >
+                              <div className="absolute inset-0 bg-zinc-900 text-white translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300">
+                                    HEHE kopal!
+                              </div>
+                              <div className="border-2 border-zinc-400 p-2 rounded-md w-fit">
+                                    <Icon className="text-3xl text-pink-600 z-10" />
+                              </div>
+                              <p className="text-2xl mt-10 ">{title}</p>
+                              <p className="text-md text-zinc-600 m-4">{subtitle}</p>
+                        </a>
+                  </div>
+            </>
+      )
+};
+
+
+
 
 const BlockInTextCard = ({ tag, text, examples }) => {
       return (
@@ -35,9 +109,11 @@ const BlockInTextCard = ({ tag, text, examples }) => {
                         <Typewrite examples={examples} />
                         <hr className="border-neutral-300" />
                   </div>
-                  <button className="w-full rounded-full border border-neutral-950 py-2 text-sm font-medium transition-colors hover:bg-neutral-950 hover:text-neutral-100">
-                        Contact Me
-                  </button>
+                  <Link to='/contact'>
+                        <button className="w-full rounded-full border border-neutral-950 py-2 text-sm font-medium transition-colors hover:bg-neutral-950 hover:text-neutral-100">
+                              Contact Me
+                        </button>
+                  </Link>
             </div>
       );
 };
