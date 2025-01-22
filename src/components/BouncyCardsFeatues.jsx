@@ -17,6 +17,9 @@ export const BouncyCardsFeatures = () => {
                               Visit Linkedin
                         </motion.button></a>
                   </div>
+
+                  {/* CARDS  */}
+
                   <div className="mb-4 grid grid-cols-12 gap-4">
                         <BounceCard className="col-span-12 md:col-span-4">
                               <CardTitle>Python for Beginners 2023</CardTitle>
