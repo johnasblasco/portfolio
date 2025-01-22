@@ -44,21 +44,21 @@ const ClipPathLinks = () => {
       return (
             <div className="divide-y divide-neutral-900 border border-neutral-900">
                   <div className="grid grid-cols-4 divide-x divide-neutral-900">
-                        <LinkBox Icon={FaReact} href="#" />
-                        <LinkBox Icon={FaLinux} href="#" />
-                        <LinkBox Icon={FaJava} href="#" />
-                        <LinkBox Icon={SiMysql} href="#" />
+                        <LinkBox Icon={FaReact} />
+                        <LinkBox Icon={FaLinux} />
+                        <LinkBox Icon={FaJava} />
+                        <LinkBox Icon={SiMysql} />
                   </div>
                   <div className="grid grid-cols-4 divide-x divide-neutral-900">
-                        <LinkBox Icon={SiExpress} href="#" />
-                        <LinkBox Icon={SiMongodb} href="#" />
-                        <LinkBox Icon={SiDjango} href="#" />
-                        <LinkBox Icon={SiTypescript} href="#" />
+                        <LinkBox Icon={SiExpress} />
+                        <LinkBox Icon={SiMongodb} />
+                        <LinkBox Icon={SiDjango} />
+                        <LinkBox Icon={SiTypescript} />
                   </div>
                   <div className="grid grid-cols-3 divide-x divide-neutral-900">
-                        <LinkBox Icon={RiNextjsLine} href="#" />
-                        <LinkBox Icon={RiNodejsFill} href="#" />
-                        <LinkBox Icon={RiTailwindCssFill} href="#" />
+                        <LinkBox Icon={RiNextjsLine} />
+                        <LinkBox Icon={RiNodejsFill} />
+                        <LinkBox Icon={RiTailwindCssFill} />
                   </div>
             </div>
       );

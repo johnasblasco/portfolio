@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
       return (
@@ -42,27 +42,31 @@ const ContactPage = () => {
                         {/* card here */}
                         <Card
                               title="Facebook"
-                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
-                              href="#"
-                              Icon={FiUser}
+                              subtitle="add me as a 'friend' :( at facebook dot com "
+                              href="https://www.facebook.com/J.blasco20"
+                              Icon={FaFacebook}
+                              gif={'/fb.gif'}
                         />
                         <Card
-                              title="Facebook"
-                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
-                              href="#"
-                              Icon={FiUser}
+                              title="Instagram"
+                              subtitle="Ig moots? hehe "
+                              href="https://www.instagram.com/lasika.spur"
+                              Icon={FaInstagram}
+                              gif={'/instagram.gif'}
                         />
                         <Card
-                              title="Facebook"
-                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
-                              href="#"
-                              Icon={FiUser}
+                              title="Github"
+                              subtitle="Follow me  on Github 💻"
+                              href="https://github.com/johnasblasco"
+                              Icon={FaGithub}
+                              gif={'/github.gif'}
                         />
                         <Card
-                              title="Facebook"
-                              subtitle="add me as a 'friend' 🥹 at facebook dot com "
-                              href="#"
-                              Icon={FiUser}
+                              title="Linkedin"
+                              subtitle="Let's connect on Linkedin ugh"
+                              href="https://www.linkedin.com/in/johnasblasco/"
+                              Icon={FaLinkedin}
+                              gif={'/linkedin.gif'}
                         />
                   </div>
 
@@ -72,18 +76,19 @@ const ContactPage = () => {
       );
 }
 
-const Card = ({ title, subtitle, href, Icon }) => {
+const Card = ({ title, subtitle, href, Icon, gif }) => {
       return (
             <>
                   <div>
                         <a
                               href={href}
-                              className="text-zinc-950 my-10 font-bold w-full p-4 rounded border-zinc-900 relative overflow-hidden group bg-white flex flex-col items-center justify-center text-center"
+                              target="_blank"
+                              className="h-64 text-zinc-950 my-10 font-bold w-full p-4 rounded border-zinc-900 relative overflow-hidden group bg-white flex flex-col items-center justify-center text-center"
                         >
-                              <div className="absolute inset-0 bg-zinc-900 text-white translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300">
-                                    HEHE kopal!
+                              <div className="absolute inset-0 bg-white text-white translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300">
+                                    <img src={gif} alt="" className="w-full h-full object-cover" />
                               </div>
-                              <div className="border-2 border-zinc-400 p-2 rounded-md w-fit">
+                              <div className="border-2 border-pink-600 p-2 rounded-md w-fit">
                                     <Icon className="text-3xl text-pink-600 z-10" />
                               </div>
                               <p className="text-2xl mt-10 ">{title}</p>

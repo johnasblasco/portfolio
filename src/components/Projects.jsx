@@ -74,6 +74,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
 
       return (
             <motion.a
+                  target="_blank"
                   href={href}
                   ref={ref}
                   onMouseMove={handleMouseMove}
