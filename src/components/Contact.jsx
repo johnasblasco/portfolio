@@ -44,7 +44,7 @@ const ContactPage = () => {
                         <Card
                               title="Instagram"
                               subtitle="Ig moots? hehe "
-                              href="https://www.instagram.com/lasika.spur"
+                              href="https://www.instagram.com/_itsnasuu"
                               Icon={FaInstagram}
                               gif={'/instagram.gif'}
                         />
